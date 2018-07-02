@@ -13,7 +13,7 @@
     1、图像分类，早期科学家试图通过编写具体特征规则以识别物体，后放弃而采用网上的大量该类别数据训练分类，此类算法包含两个函数（train function & predict function），前者用于接收图片和标签（CIFAR-10数据集），然后输出一个模型，后者使用生成的模型并对图片进行分类；
 
     2、比较图片的方法之一曼哈顿距离
-    ![image](https://github.com/Alley-X/Git-Learning/blob/master/cv-learning/image_storage/L1_distance.png)
+    ![image](https://github.com/Alley-X/Git-Learning/raw/master/cv-learning/image_storage/L1_distance.png)
 
       最近邻分类算法在训练速度很快（实际上只是存储数据和标签），而在测试阶段很慢（进行大量的向量运算），而后发展的卷积神经网络等相反，训练过程很漫长，在测试阶段很迅速。
 
