@@ -25,12 +25,12 @@
     3.1、K值一般赋予较大的值，如此会使图像分类的决策边缘更平滑，同时也能减少背景噪声的影响。
 
     3.2、关于图片分类的算法除了曼哈顿距离（L1距离）还可使用欧式距离（L2距离）
-    ![image](https://github.com/Alley-X/Git-Learning/blob/master/cv-learning/image_storage/L2_distance.png）
+    ![image] (https://github.com/Alley-X/Git-Learning/blob/master/cv-learning/image_storage/L2_distance.png）
 
 L1距离（出租车距离）中，方形上任意一点都与原点等距，|x1-x2|+|y1-y2|，在L2距离中，圆形上任意一点都与原点等距，在这两种度量中，有着更基本的拓扑假设，若改变L1距离的坐标轴方向，会导致距离的改变 ，而在L2中不存在此种现象，对应于实际，若你输入的特征向量有特殊意义，采用L1距离度量更好，若是一个公用空间的通用向量，则L2更合适。K值和距离度量一般称为超参数。
 
     3.3、在进行模型训练时，将一个数据集分为训练集和测试集，在训练集上选取不同的超参数进行模型训练，再在测试集上选取出性能最好的一组超参数，这种做法不建议，此种做法无可避免地只能在已有的测试集上表现优良，但在未知的数据中就未必有好效果。一般的做法如下：
-    ![image](https://github.com/Alley-X/Git-Learning/blob/master/cv-learning/image_storage/dataset_classification.png)
+    ![image] (https://github.com/Alley-X/Git-Learning/raw/master/cv-learning/image_storage/dataset_classification.png)
 
 将整个数据集分为三个部分，train中设置不同的超参数训练，再在验证集中进行评估，最后在test中拿出性能最好的模型。值得注意的是，test集一定要保持其“独立性”，不能与train中其他数据产生联系。有时也会将train分为几个部分，在前几个fold中训练，在最后一个fold中验证，再分别以之前的训练fold为验证集，其余部分为训练集再对超参数进行性能评估，此种方法称为交叉验证。
 ![image](https://github.com/Alley-X/Git-Learning/blob/master/cv-learning/image_storage/dataset_classification.png)
